@@ -1,0 +1,1 @@
+[{"uid":"881ce90db31602b4","name":"Test home endpoint","time":{"start":1755590062143,"stop":1755590063296,"duration":1153},"status":"broken","severity":"critical"},{"uid":"ad20193e01f38455","name":"test_chat_flow","time":{"start":1755585385110,"stop":1755585395897,"duration":10787},"status":"broken","severity":"normal"}]
