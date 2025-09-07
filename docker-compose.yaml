@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
+
+  yolo:
+    image: marwanhalabi/yolo-lama:0.0.2
+    environment:
+      - DB_BACKEND=postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
+
+  ollama-ui:
+    image: marwanhalabi/my-lama:0.0.4
+    ports:
+      - "3000:3000"
+    environment:
+      - YOLO_SERVICE=yolo:8080
+      - YOLO_USER=admin
+      - YOLO_PASS=admin
+
+  
